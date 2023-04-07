@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BTC Payment</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(174, 0, 255);
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      .button-a{
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                color: blueviolet;
+                background-color: yellowgreen;
+                align-content: center;
+                display: block;
+                margin: auto;
+            }
+            .button-a:hover{
+                background-color: blue;
+                color: aquamarine;
+            }
+      
+      .payment-info {
+        margin: 20px;
+      }
+      
+      .qr-code {
+        text-align: center;
+      }
+      
+      .wallet-address {
+        margin-top: 20px;
+      }
+      
+      .wallet-address p {
+        margin: 0;
+      }
+      
+      .wallet-address input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px;
+        margin-top: 5px;
+        font-size: 16px;
+      }
+      
+      .wallet-address button {
+        margin-top: 5px;
+        font-size: 16px;
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .wallet-address button:hover {
+        background-color: #3E8E41;
+      }
+    </style> 
+  </head>
+  <body>
+    <h1>BTC DEPOSIT</h1>
+    <h2>ALERT!!!</h2 >
+    <p>Copy your wallet address below carefully to prevent loss of money.</p>
+    <div class="payment-info">
+      <p>Scan the QR code or copy the wallet address to make a payment:</p>
+      <div class="qr-code">
+        <!-- Replace the src attribute with the URL to your QR code image -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:3EoLy9Cd1RCLeoVeFKB1cDWbXesqEfWMwy&size=200x200" alt="BTC wallet QR code">
+      </div>
+      <div class="wallet-address">
+        <p>Wallet address:</p>
+        <input type="text" value="3EoLy9Cd1RCLeoVeFKB1cDWbXesqEfWMwy" id="wallet-address">
+        <button onclick="copyToClipboard()">COPY YOUR DEPOSIT ADDRESS</button>
+      </div>
+      <h3>  TAKE NOTE THAT YOUR BITCOIN MONEY RETURNS BASED ON YOUR OFFER WOULD BE SENT TO YOUR WALLET IN 3O MINUTES. YOU CAN INVEST ONCE IN 48 HOURS!!</h3>
+      <button onclick="window.location.href='file:///C:/Users/Up/OneDrive/Desktop/BITCOIN%20PROJECT/bit4.html'" class="button-a">CLICK HERE AFTER PAYMENT</button>
+    </div>
+    <script>
+    function copyToClipboard() {
+        var walletAddress = document.getElementById("wallet-address");
+        walletAddress.select();
+        document.execCommand("copy");
+        alert("Copied the wallet address: " + walletAddress.value);
+      }
+      </script>
+  </body>
+</html>
